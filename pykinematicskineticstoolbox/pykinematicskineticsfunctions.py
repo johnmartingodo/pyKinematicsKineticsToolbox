@@ -75,7 +75,7 @@ def calculate_Ib(m, r_xx_CG, rg_b):
 	return Ib
 
 def calculate_MRB(m, r_xx_CG, rg_b):
-	''' Calculate M matrix for a vessel with center of gravity at rg_b from CO, defined in body coordinates.
+	''' Calculate M matrix for a vessel with center of gravity at rg_b from CO, defined in BODY coordinates.
 	rg_b denotes the position of COG expressed in BODY coordinates ("vector to b expressed in BODY coordinates". See Fossen 2011 page 51)
 	'''
 	Ib 						= calculate_Ib(m, r_xx_CG, rg_b)
@@ -112,7 +112,13 @@ def calculate_MRB(m, r_xx_CG, rg_b):
 #
 # 	return M_matrix, Ib
 
-def coriolisMatrix(m, Ib, nu2, rg_b):
+def calculate_CRB(m, Ib, nu2, rg_b):
+	''' Calculate coriolis matrix for a vessel with center of gravity at
+	rg_b from CO, defined in BODY coordinates.
+	* m: Mass
+	* Ib: Inertia matrix about the BODY coordinate system origin
+	* nu2: vector of BODY frame angular velocities in roll, pitch and yaw respectively
+	* rg_b: vector to CG in BODY coordinate system '''
 	CRB 			= np.zeros((6, 6))
 	CRB[0:3, 0:3]	= m*Smtrx(nu2)
 	CRB[0:3, 3:7] 	= -m*np.dot(Smtrx(nu2), Smtrx(rg_b))
@@ -123,7 +129,9 @@ def coriolisMatrix(m, Ib, nu2, rg_b):
 
 	return CRB
 
-def angular_transformation_matrix(euler_angles):
+def calculate_TTheta(euler_angles):
+	'''Calculate the transformation matrix from body frame angular velocities to
+	time derivatives of Euler angles'''
 	phi  	= euler_angles[0]
 	theta 	= euler_angles[1]
 	psi 	= euler_angles[2]
