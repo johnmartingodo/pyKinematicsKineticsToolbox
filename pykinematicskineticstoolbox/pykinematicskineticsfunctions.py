@@ -57,7 +57,7 @@ def R_axis_theta(k_in, theta):
 # Kinetics functions
 
 def calculate_Ig(m, r_xx_CG):
-	''' Inertia matrix about CG. m denotes vessel mass, r_xx_CG is a (6x6)
+	''' Inertia matrix about CG. m denotes vessel mass, r_xx_CG is a (3x3)
 	array denoting all radii of inertia about CG.'''
 	Ig 					= np.zeros((3, 3))
 	for i in range(3):
@@ -68,7 +68,7 @@ def calculate_Ig(m, r_xx_CG):
 def calculate_Ib(m, r_xx_CG, rg_b):
 	''' Inertia matrix about the origin of the vessel coordinate system.
 	* m: vessel mass
-	* r_xx_CG: (6x6) matrix of radii of inertia about CG
+	* r_xx_CG: (3x3) matrix of radii of inertia about CG
 	* rg_b: position of CG expressed in BODY coordinates. Ref. Fossen 2011, page 50 (1)'''
 	Ig 					= calculate_Ig(m, r_xx_CG)
 	Ib 					= Ig - m*Smtrx(rg_b)**2
