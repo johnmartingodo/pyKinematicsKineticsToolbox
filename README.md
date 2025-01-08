@@ -11,6 +11,10 @@ Simply add the following line to any python code to import the functions:
 from pykinematicskineticstoolbox.pykinematicskineticsfunctions import *
 There is no need to add the path of the installation before importing.
 
+## Testing and examples
+There are no notebooks exemplifying the use of this package, however, examples 
+can be found for instance in the my_mesh source code.
+
 ## Contributing
 
 This is closed source software intended for personal use by the author
