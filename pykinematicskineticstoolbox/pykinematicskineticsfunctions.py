@@ -1,9 +1,5 @@
-# Copyright (C) 2023 NTNU
-# Unauthorized copying of this file, via any medium is strictly 
-# prohibited. 
-# Proprietary and confidential. All rights reserved. See the
-# LICENSE.md file in the root of the hydrofoil_vessel_design repository 
-# for more details.
+# Copyright (C) 2021 NTNU
+# MIT License. See the LICENSE.md file for details
 # Author: John Martin Kleven Godø <john.martin.godo@ntnu.no;
 # john.martin.kleven.godo@gmail.com>
 

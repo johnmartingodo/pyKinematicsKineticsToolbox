@@ -5,7 +5,7 @@ setup(name="pykinematicskineticstoolbox",
 	  description="Installable python package which collects useful kinematics and kinetics functions",
 	  author="John Martin Kleven Godø",
 	  author_email="john.martin.kleven.godo@gmail.com",
-	  license="Copyright 2023, John Martin Kleven Godø, all rights reserved",
+	  license="MIT",
 	  packages=["pykinematicskineticstoolbox"],
 	  install_requires=[],
 )

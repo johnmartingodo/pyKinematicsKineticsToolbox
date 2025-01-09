@@ -11,29 +11,9 @@ Simply add the following line to any python code to import the functions:
 from pykinematicskineticstoolbox.pykinematicskineticsfunctions import *
 There is no need to add the path of the installation before importing.
 
-## Testing and examples
-There are no notebooks exemplifying the use of this package, however, examples 
-can be found for instance in the my_mesh source code.
-
-## Contributing
-
-This is closed source software intended for personal use by the author
-in his work at the Department of Marine Technology, NTNU. Please contact
-the author if you are interested in contributing to the project or using it in 
-your own work.
-
-
-## Authors
-
-  - **John Martin Kleven Godø** - *Author of the code* -
-    [johnmartingodo](https://github.com/johnmartingodo)
-
-The work was supervised by Professors Sverre Steen and Odd Magnus Faltinsen at 
-the NTNU Department of Marine Technology.
-
 ## License
 
-This is proprietary software. See the [LICENSE.md](LICENSE.md) file for details
+MIT License. See the [LICENSE.md](LICENSE.md) file for details
 
 
 ## Acknowledgments
