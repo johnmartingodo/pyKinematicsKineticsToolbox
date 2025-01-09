@@ -15,7 +15,6 @@ There is no need to add the path of the installation before importing.
 
 MIT License. See the [LICENSE.md](LICENSE.md) file for details
 
-
 ## Acknowledgments
 The development of this code was done at the NTNU Department of Marine Technology. 
 It was funded by the enabling Zero Emission passenger 
